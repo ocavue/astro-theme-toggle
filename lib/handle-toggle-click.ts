@@ -1,6 +1,8 @@
+import { getTheme, setTheme } from './theme'
+
 function toggleTheme() {
-  const theme = window.themeToggle?.getTheme?.()
-  window.themeToggle?.setTheme?.(theme === 'light' ? 'dark' : 'light')
+  const theme = getTheme()
+  setTheme(theme === 'light' ? 'dark' : 'light')
 }
 
 async function startCircleAnimation(
