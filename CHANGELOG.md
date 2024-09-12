@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.0...v0.3.1) (2024-09-12)
+
+
+### Bug Fixes
+
+* fix unknown themeToggle typescript error ([f88cf94](https://github.com/ocavue/astro-theme-toggle/commit/f88cf94164baef144bbc1505177e10107ebf98b8))
+
 ## [0.3.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.2.1...v0.3.0) (2024-09-12)
 
 
