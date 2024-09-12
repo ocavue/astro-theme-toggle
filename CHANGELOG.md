@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.2.0...v0.2.1) (2024-09-12)
+
+
+### Bug Fixes
+
+* fix error "window is not defined" ([4c2da4c](https://github.com/ocavue/astro-theme-toggle/commit/4c2da4c19d64c25f4c1409d1a7ad24cf9570e3bb))
+
 ## 0.2.0 (2024-09-12)
 
 
