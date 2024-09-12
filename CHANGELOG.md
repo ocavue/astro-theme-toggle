@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.2.1...v0.3.0) (2024-09-12)
+
+
+### Features
+
+* export theme getter and setter ([f438cf7](https://github.com/ocavue/astro-theme-toggle/commit/f438cf751b59414903932694a87620f56c305d4c))
+
 ## [0.2.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.2.0...v0.2.1) (2024-09-12)
 
 
