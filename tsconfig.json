@@ -2,10 +2,7 @@
   "compilerOptions": {
     "target": "es2018",
     "module": "esnext",
-    "lib": [
-      "esnext",
-      "dom"
-    ],
+    "lib": ["esnext", "dom"],
     "jsx": "preserve",
     "allowJs": true,
     "moduleResolution": "Bundler",
@@ -18,9 +15,5 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true
   },
-  "include": [
-    "lib",
-    "./*.ts",
-    "./*.js",
-  ]
+  "include": ["lib", "./*.ts", "./*.js"]
 }
