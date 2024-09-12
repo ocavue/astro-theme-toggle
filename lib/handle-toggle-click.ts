@@ -1,9 +1,4 @@
-import { getTheme, setTheme } from './theme'
-
-function toggleTheme() {
-  const theme = getTheme()
-  setTheme(theme === 'light' ? 'dark' : 'light')
-}
+import { toggleTheme } from './theme'
 
 async function startCircleAnimation(
   callback: () => void,
