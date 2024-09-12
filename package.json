@@ -13,50 +13,29 @@
     "url": "https://github.com/ocavue/astro-theme-toggle.git"
   },
   "bugs": "https://github.com/ocavue/astro-theme-toggle/issues",
-  "keywords": [],
-  "sideEffects": false,
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
-  "files": [
-    "dist"
+  "keywords": [
+    "astro",
+    "withastro",
+    "astro-component"
   ],
+  "sideEffects": false,
+  "exports": {
+    ".": "./lib/index.ts"
+  },
   "scripts": {
-    "build": "tsup",
-    "dev": "tsup --watch",
+    "build": "bash build.sh",
     "lint": "eslint .",
     "fix": "eslint --fix . && prettier --write .",
-    "prepublishOnly": "nr build",
-    "start": "esno src/index.ts",
-    "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/ni": "^0.23.0",
     "@ocavue/eslint-config": "^2.6.0",
     "@types/node": "^20.16.3",
+    "astro": "^4.15.4",
+    "esbuild": "^0.23.1",
     "eslint": "^9.9.1",
-    "esno": "^4.7.0",
     "prettier": "^3.3.3",
-    "tsup": "^8.2.4",
-    "typescript": "^5.5.4",
-    "vite": "^5.4.2",
-    "vitest": "^2.0.5"
+    "typescript": "^5.5.4"
   },
   "renovate": {
     "extends": [
