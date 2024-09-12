@@ -43,7 +43,8 @@ npm install astro-theme-toggle
 
 ## Live Examples
 
-- [Astrobook](https://astrobook.com)
+- [Astrobook](https://astrobook.pages.dev/)
+- [Ocavue's Blog](https://ocavue.com)
 
 ## License
 
