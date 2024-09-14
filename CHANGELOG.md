@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.1...v0.3.2) (2024-09-14)
+
+
+### Bug Fixes
+
+* fix typescript error about startViewTransition ([91774de](https://github.com/ocavue/astro-theme-toggle/commit/91774def1d4a6d08ecf22c423af8edcf3448ff7d))
+
 ## [0.3.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.0...v0.3.1) (2024-09-12)
 
 
