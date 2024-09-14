@@ -40,9 +40,5 @@
   // Set the theme on load
   setTheme(getTheme())
 
-  if (!window.themeToggle) {
-    window.themeToggle = {}
-  }
-  window.themeToggle.setTheme = setTheme
-  window.themeToggle.getTheme = getTheme
+  window.astroThemeToggle = { setTheme, getTheme }
 })()

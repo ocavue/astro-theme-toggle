@@ -6,5 +6,5 @@
   }
 </style>
 <script is:inline>
-"use strict";(()=>{(()=>{let t="theme-toggle";function o(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}function g(){let e=localStorage.getItem(t);return e==="dark"||e==="light"?e:null}function m(){return g()||o()}function h(e){e===o()?localStorage.removeItem(t):localStorage.setItem(t,e)}function r(e){let l=document.documentElement;l.classList.toggle("dark",e==="dark"),l.style.colorScheme=e}function n(e){h(e),r(e)}n(m()),window.themeToggle||(window.themeToggle={}),window.themeToggle.setTheme=n,window.themeToggle.getTheme=m})();})();
+"use strict";(()=>{(()=>{let t="theme-toggle";function o(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}function l(){let e=localStorage.getItem(t);return e==="dark"||e==="light"?e:null}function n(){return l()||o()}function c(e){e===o()?localStorage.removeItem(t):localStorage.setItem(t,e)}function s(e){let m=document.documentElement;m.classList.toggle("dark",e==="dark"),m.style.colorScheme=e}function r(e){c(e),s(e)}r(n()),window.astroThemeToggle={setTheme:r,getTheme:n}})();})();
 </script>
