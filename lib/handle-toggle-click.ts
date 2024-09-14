@@ -1,22 +1,32 @@
 import { toggleTheme } from './theme'
 
+type StartViewTransition = (
+  updateCallback?: () => void | Promise<void>,
+) => ViewTransition | undefined
+
+type ViewTransition = {
+  finished?: Promise<void>
+  ready?: Promise<void>
+  updateCallbackDone?: Promise<void>
+}
+
 async function startCircleAnimation(
   callback: () => void,
   x: number,
   y: number,
 ) {
-  // @ts-expect-error: startViewTransition is not typed
-  if (typeof document.startViewTransition !== 'function') {
+  const startViewTransition = (
+    document as unknown as { startViewTransition?: StartViewTransition }
+  ).startViewTransition
+
+  if (typeof startViewTransition !== 'function') {
     callback()
     return
   }
 
-  // @ts-expect-error: startViewTransition is not typed
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-  await document.startViewTransition(() => {
+  await startViewTransition(() => {
     callback()
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-  }).ready
+  })?.ready
 
   const gradientOffset = 0.7
   const maskSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><defs><radialGradient id="toggle-theme-gradient"><stop offset="${gradientOffset}"/><stop offset="1" stop-opacity="0"/></radialGradient></defs><circle cx="4" cy="4" r="4" fill="url(#toggle-theme-gradient)"/></svg>`
