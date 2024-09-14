@@ -4,6 +4,8 @@
 
 Create a ripple-style theme toggle animation in your Astro project.
 
+https://github.com/user-attachments/assets/19069840-629d-445b-82e7-aea142242225
+
 ## Installation
 
 ```bash
