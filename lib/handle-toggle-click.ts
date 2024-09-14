@@ -1,30 +1,22 @@
 import { toggleTheme } from './theme'
 
-type StartViewTransition = (
-  updateCallback?: () => void | Promise<void>,
-) => ViewTransition | undefined
-
-type ViewTransition = {
-  finished?: Promise<void>
-  ready?: Promise<void>
-  updateCallbackDone?: Promise<void>
-}
-
 async function startCircleAnimation(
   callback: () => void,
   x: number,
   y: number,
 ) {
-  const startViewTransition = (
-    document as unknown as { startViewTransition?: StartViewTransition }
-  ).startViewTransition
+  const doc = document as unknown as {
+    startViewTransition?: (updateCallback?: () => unknown) => {
+      ready?: Promise<void>
+    }
+  }
 
-  if (typeof startViewTransition !== 'function') {
+  if (typeof doc.startViewTransition !== 'function') {
     callback()
     return
   }
 
-  await startViewTransition(() => {
+  await doc.startViewTransition(() => {
     callback()
   })?.ready
 
