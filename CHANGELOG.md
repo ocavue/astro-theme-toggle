@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.3](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.2...v0.3.3) (2024-09-14)
+
+
+### Bug Fixes
+
+* fix Illegal invocation ([a1f298d](https://github.com/ocavue/astro-theme-toggle/commit/a1f298d431f9106182adf1bf1a3220f4fbea39b2))
+
 ## [0.3.2](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.1...v0.3.2) (2024-09-14)
 
 
