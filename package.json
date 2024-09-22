@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.3.3",
   "packageManager": "pnpm@8.15.9",
-  "description": "",
+  "description": "Add a ripple-style theme toggle animation to your Astro project with ease",
   "author": "ocavue <ocavue@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/ocavue",
@@ -23,6 +23,7 @@
     ".": "./lib/index.ts"
   },
   "scripts": {
+    "dev": "astro dev",
     "build": "bash build.sh",
     "lint": "eslint .",
     "fix": "eslint --fix . && prettier --write .",

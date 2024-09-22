@@ -13,7 +13,18 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true
+    "skipDefaultLibCheck": true,
+    "paths": {
+      "astro-theme-toggle": ["./lib"]
+    }
   },
-  "include": ["lib", "./*.ts", "./*.js"]
+  "include": [
+    "lib",
+    "./*.ts",
+    "./*.js",
+    "./*.ts",
+    "./*.mjs",
+    "website",
+    ".astro"
+  ]
 }
