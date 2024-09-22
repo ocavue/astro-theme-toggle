@@ -1,44 +1,15 @@
+<!-- prettier-ignore-start -->
 <button id="theme-toggle">
   <!-- https://lucide.dev/icons/moon -->
-  <svg
-    class="icon-moon"
-    xmlns="http://www.w3.org/2000/svg"
-    width="32"
-    height="32"
-    viewBox="0 0 24 24"
-    ><path
-      fill="none"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M12 3a6 6 0 0 0 9 9a9 9 0 1 1-9-9"></path></svg
-  >
+  <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
   <!-- https://lucide.dev/icons/sun -->
-  <svg
-    class="icon-sun"
-    xmlns="http://www.w3.org/2000/svg"
-    width="32"
-    height="32"
-    viewBox="0 0 24 24"
-    ><g
-      fill="none"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      ><circle cx="12" cy="12" r="4"></circle><path
-        d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
-      ></path></g
-    ></svg
-  >
+  <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
 </button>
+<!-- prettier-ignore-end -->
 
 <script>
   import { handleToggleClick } from 'astro-theme-toggle'
-  document
-    .getElementById('theme-toggle')
-    ?.addEventListener('click', handleToggleClick)
+  document.getElementById('theme-toggle')?.addEventListener('click', handleToggleClick)
 </script>
 
 <style is:global>
@@ -48,7 +19,6 @@
   .icon-moon {
     display: none;
   }
-
   .dark .icon-sun {
     display: none;
   }
