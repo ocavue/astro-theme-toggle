@@ -18,7 +18,7 @@ npm install astro-theme-toggle
 
    ```astro
    ---
-   import { ThemeScript } from 'astro-theme-toggle'
+   import { ThemeScript } from 'astro-theme-toggle';
    ---
    <head>
      <meta charset="utf-8" />
@@ -40,9 +40,9 @@ npm install astro-theme-toggle
    </button>
 
    <script>
-     import { handleToggleClick } from 'astro-theme-toggle'
-     document.getElementById('theme-toggle')?.addEventListener('click', handleToggleClick)
-     </script>
+     import { handleToggleClick } from 'astro-theme-toggle';
+     document.getElementById('theme-toggle')?.addEventListener('click', handleToggleClick);
+   </script>
 
    <style is:global>
      .icon-sun {
