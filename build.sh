@@ -6,3 +6,5 @@ cp lib/theme-style.astro lib/theme-script.astro
 echo "<script is:inline>" >> lib/theme-script.astro
 cat temp/theme-script.js >> lib/theme-script.astro
 echo "</script>" >> lib/theme-script.astro
+
+astro build 

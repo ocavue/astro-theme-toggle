@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/astro-theme-toggle?color=a1b858&label=)](https://www.npmjs.com/package/astro-theme-toggle)
 
-Create a ripple-style theme toggle animation in your Astro project.
+Add a ripple-style theme toggle animation to your Astro project with ease.
 
 https://github.com/user-attachments/assets/19069840-629d-445b-82e7-aea142242225
 

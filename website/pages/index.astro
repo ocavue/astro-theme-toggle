@@ -1,0 +1,48 @@
+---
+import AstroLogoBackground from '../components/astro-logo-background.astro'
+import GithubCorner from '../components/github-corner.astro'
+import ThemeToggleButton from '../components/theme-toggle-button.astro'
+import Layout from '../layouts/Layout.astro'
+---
+
+<Layout title="Welcome to Astro.">
+  <main>
+    <AstroLogoBackground />
+    <h1>astro-theme-toggle</h1>
+    <div class="instructions">
+      <span
+        >Add a ripple-style theme toggle animation to your Astro project with
+        ease</span
+      >
+    </div>
+    <div class="instructions">
+      <ThemeToggleButton />
+    </div>
+    <GithubCorner />
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .instructions {
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+</style>
