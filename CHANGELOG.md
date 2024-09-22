@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.4](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.3...v0.3.4) (2024-09-22)
+
+
+### Bug Fixes
+
+* correct docs ([#9](https://github.com/ocavue/astro-theme-toggle/issues/9)) ([2e7bb56](https://github.com/ocavue/astro-theme-toggle/commit/2e7bb56e4ecf13d7704d61c2d2e944aa6f127f08))
+
 ## [0.3.3](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.2...v0.3.3) (2024-09-14)
 
 
