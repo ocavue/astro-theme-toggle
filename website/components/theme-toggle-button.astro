@@ -9,7 +9,11 @@
 
 <script>
   import { handleToggleClick } from 'astro-theme-toggle'
+
   document.getElementById('theme-toggle')?.addEventListener('click', handleToggleClick)
+  document.addEventListener("astro:after-swap", () => {
+        document.getElementById("theme-toggle")?.addEventListener("click", handleToggleClick);
+    });
 </script>
 
 <style is:global>

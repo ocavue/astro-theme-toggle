@@ -11,8 +11,31 @@ async function startCircleAnimation(
     }
   }
 
+  const removeTemporaryStyles = () => {
+    const style = document.getElementById('temp-theme-transition-styles')
+    if (style) {
+      document.head.removeChild(style)
+    }
+  }
+
+  const injectTemporaryStyles = () => {
+    removeTemporaryStyles()
+    const style = document.createElement('style')
+    style.id = 'temp-theme-transition-styles'
+    style.textContent = `
+        ::view-transition-old(root),
+        ::view-transition-new(root) {
+            animation: none;
+            mix-blend-mode: normal;
+        }
+    `
+    document.head.appendChild(style)
+  }
+  injectTemporaryStyles()
+
   if (typeof doc.startViewTransition !== 'function') {
     callback()
+    removeTemporaryStyles()
     return
   }
 

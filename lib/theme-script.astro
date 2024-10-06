@@ -1,10 +1,34 @@
-<style is:global>
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation: none;
-    mix-blend-mode: normal;
-  }
-</style>
 <script is:inline>
-"use strict";(()=>{(()=>{let t="theme-toggle";function o(){return window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"}function l(){let e=localStorage.getItem(t);return e==="dark"||e==="light"?e:null}function n(){return l()||o()}function c(e){e===o()?localStorage.removeItem(t):localStorage.setItem(t,e)}function s(e){let m=document.documentElement;m.classList.toggle("dark",e==="dark"),m.style.colorScheme=e}function r(e){c(e),s(e)}r(n()),window.astroThemeToggle={setTheme:r,getTheme:n}})();})();
+  "use strict";
+  const themeToggle = () => {
+      (() => {
+          let t = "theme-toggle";
+          function o() {
+              return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+          }
+          function l() {
+              let e = localStorage.getItem(t);
+              return e === "dark" || e === "light" ? e : null;
+          }
+          function n() {
+              return l() || o();
+          }
+          function c(e) {
+              e === o() ? localStorage.removeItem(t) : localStorage.setItem(t, e);
+          }
+          function s(e) {
+              let m = document.documentElement;
+              m.classList.toggle("dark", e === "dark"), (m.style.colorScheme = e);
+          }
+          function r(e) {
+              c(e), s(e);
+          }
+          r(n()), (window.astroThemeToggle = { setTheme: r, getTheme: n });
+      })();
+  }
+  themeToggle();
+
+  document.addEventListener("astro:after-swap", () => {
+        themeToggle();
+    });
 </script>
