@@ -1,5 +1,22 @@
 import { toggleTheme } from './theme'
 
+const STYLE_ID = 'astro-theme-toggle-temporary-styles'
+const STYLE_CONTENT =
+  '::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }'
+
+function removeTemporaryStyles() {
+  const style = document.getElementById(STYLE_ID)
+  style?.remove()
+}
+
+function injectTemporaryStyles() {
+  removeTemporaryStyles()
+  const style = document.createElement('style')
+  style.id = STYLE_ID
+  style.textContent = STYLE_CONTENT
+  document.head.appendChild(style)
+}
+
 async function startCircleAnimation(
   callback: () => void,
   x: number,
@@ -8,6 +25,7 @@ async function startCircleAnimation(
   const doc = document as unknown as {
     startViewTransition?: (updateCallback?: () => unknown) => {
       ready?: Promise<void>
+      finished?: Promise<void>
     }
   }
 
@@ -16,9 +34,14 @@ async function startCircleAnimation(
     return
   }
 
-  await doc.startViewTransition(() => {
+  injectTemporaryStyles()
+
+  const transition = doc.startViewTransition(() => {
     callback()
-  })?.ready
+  })
+
+  await transition?.ready
+  void transition?.finished?.then(removeTemporaryStyles)
 
   const gradientOffset = 0.7
   const maskSvg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><defs><radialGradient id="toggle-theme-gradient"><stop offset="${gradientOffset}"/><stop offset="1" stop-opacity="0"/></radialGradient></defs><circle cx="4" cy="4" r="4" fill="url(#toggle-theme-gradient)"/></svg>`

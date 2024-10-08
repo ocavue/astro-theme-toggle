@@ -41,8 +41,14 @@ npm install astro-theme-toggle
    </button>
 
    <script>
-     import { handleToggleClick } from 'astro-theme-toggle';
-     document.getElementById('theme-toggle')?.addEventListener('click', handleToggleClick);
+    import { handleToggleClick } from 'astro-theme-toggle'
+    const addListener = () => {
+      document
+        .getElementById('theme-toggle')
+        ?.addEventListener('click', handleToggleClick)
+    }
+    addListener()
+    document.addEventListener('astro:after-swap', addListener)
    </script>
 
    <style is:global>
