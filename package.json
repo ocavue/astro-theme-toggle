@@ -30,13 +30,23 @@
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@astrojs/react": "^3.6.2",
+    "@astrojs/vue": "^4.5.2",
     "@ocavue/eslint-config": "^2.6.0",
     "@types/node": "^20.16.3",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
     "astro": "^4.15.4",
+    "astro-expressive-code": "^0.37.0",
     "esbuild": "^0.23.1",
     "eslint": "^9.9.1",
+    "lucide-react": "^0.447.0",
+    "lucide-vue-next": "^0.447.0",
     "prettier": "^3.3.3",
-    "typescript": "^5.5.4"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "typescript": "^5.5.4",
+    "vue": "^3.5.11"
   },
   "renovate": {
     "extends": [

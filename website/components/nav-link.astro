@@ -1,0 +1,33 @@
+---
+export interface Props {
+  href: string
+}
+
+const { href } = Astro.props as Props
+const trimSlash = (str: string) => str.trim().replace(/^\/|\/$/g, '')
+const active = trimSlash(Astro.url.pathname) === trimSlash(href)
+---
+
+<a class="nav-link" data-active={active ? '' : undefined} href={href}>
+  <slot />
+</a>
+
+<style>
+  .nav-link {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    color: var(--text-color);
+    text-decoration: none;
+    opacity: 0.5;
+  }
+
+  .nav-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+  }
+
+  .nav-link[data-active] {
+    opacity: 1;
+  }
+</style>

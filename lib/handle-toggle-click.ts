@@ -46,6 +46,6 @@ async function startCircleAnimation(
   )
 }
 
-export function handleToggleClick(event: MouseEvent) {
+export function handleToggleClick(event: { clientX: number; clientY: number }) {
   void startCircleAnimation(toggleTheme, event.clientX, event.clientY)
 }

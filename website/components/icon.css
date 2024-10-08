@@ -1,0 +1,12 @@
+.icon-sun {
+  display: block;
+}
+.icon-moon {
+  display: none;
+}
+.dark .icon-sun {
+  display: none;
+}
+.dark .icon-moon {
+  display: block;
+}

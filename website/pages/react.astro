@@ -3,20 +3,20 @@ import { Code } from 'astro-expressive-code/components'
 import headCode from '../components/head.astro?raw'
 import iconCssCode from '../components/icon.css?raw'
 import Nav from '../components/nav.astro'
-import ThemeToggleButton from '../components/theme-toggle-button.astro'
-import buttonCode from '../components/theme-toggle-button.astro?raw'
+import ThemeToggleButtonReact from '../components/theme-toggle-button-react'
+import buttonCode from '../components/theme-toggle-button-react.tsx?raw'
 import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>
   <main>
     <div class="instructions">
-      <ThemeToggleButton  />
+      <ThemeToggleButtonReact client:load />
     </div>
     <Nav />
 
     <div style="display: flex; flex-direction: column; gap: 20px;">
-      <Code code={buttonCode} lang="astro" title="theme-toggle-button.astro" />
+      <Code code={buttonCode} lang="tsx" title="theme-toggle-button-react.tsx" />
       <Code code={headCode} lang="astro" title="head.astro" />
       <Code code={iconCssCode} lang="css" title="icon.css" />
     </div>

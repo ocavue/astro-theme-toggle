@@ -1,0 +1,19 @@
+---
+import NavLink from './nav-link.astro'
+---
+
+<div class="nav">
+  <NavLink href="/">Astro Example</NavLink>
+  <NavLink href="/react">React Example</NavLink>
+  <NavLink href="/vue">Vue Example</NavLink>
+</div>
+
+<style>
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 80px;
+  }
+</style>
