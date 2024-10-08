@@ -1,26 +1,25 @@
 ---
-import { ThemeScript } from 'astro-theme-toggle'
-
-interface Props {
-  title: string
-}
-
-const { title } = Astro.props
+import Head from '../components/head.astro'
+import GithubCorner from '../components/github-corner.astro'
+import LogoBackgroundAstro from '../components/logo-background-astro.astro'
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <ThemeScript />
-  </head>
+  <Head />
   <body>
-    <slot />
+    <main>
+      <LogoBackgroundAstro />
+      <h1>astro-theme-toggle</h1>
+      <div class="instructions">
+        <span
+          >Add a ripple-style theme toggle animation to your Astro project with
+          ease</span
+        >
+      </div>
+      <slot />
+    </main>
+    <GithubCorner />
   </body>
 </html>
 <style is:global>
@@ -35,19 +34,49 @@ const { title } = Astro.props
       white 60%
     );
 
-    --background: #13151a;
-    --text-color: #b6b9c2;
-  }
-
-  .dark {
     --background: #ffffff;
     --text-color: #2c2c2c;
   }
 
+  .dark {
+    --background: #13151a;
+    --text-color: #b6b9c2;
+  }
 
   html {
     font-family: system-ui, sans-serif;
     background: var(--background);
     color: var(--text-color);
+  }
+
+  button {
+    margin: 0;
+    border-color: transparent;
+    border-width: 0;
+    background: transparent;
+    color: var(--text-color);
+  }
+
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: var(--text-color);
+    font-size: 20px;
+    line-height: 1.6;
+  }
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  .instructions {
+    margin-bottom: 5rem;
+    text-align: center;
   }
 </style>

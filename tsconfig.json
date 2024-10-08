@@ -16,7 +16,9 @@
     "skipDefaultLibCheck": true,
     "paths": {
       "astro-theme-toggle": ["./lib"]
-    }
+    },
+    "outDir": "temp/ts",
+    "jsxImportSource": "react"
   },
   "include": [
     "lib",
