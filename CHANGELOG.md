@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.5](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.4...v0.3.5) (2024-10-08)
+
+
+### Bug Fixes
+
+* support Astro's built-in view transitions ([#13](https://github.com/ocavue/astro-theme-toggle/issues/13)) ([bdc0ef0](https://github.com/ocavue/astro-theme-toggle/commit/bdc0ef0896e7b6afcc324f76e534bee8d5629d15))
+
 ## [0.3.4](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.3...v0.3.4) (2024-09-22)
 
 
