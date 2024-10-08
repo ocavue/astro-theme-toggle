@@ -37,8 +37,15 @@
     setStyle(theme)
   }
 
+  function setupTheme() {
+    setTheme(getTheme())
+  }
+
   // Set the theme on load
-  setTheme(getTheme())
+  setupTheme()
+
+  // Set the theme after a page swap
+  document.addEventListener('astro:after-swap', setupTheme)
 
   window.astroThemeToggle = { setTheme, getTheme }
 })()
