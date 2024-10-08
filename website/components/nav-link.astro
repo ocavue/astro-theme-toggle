@@ -4,7 +4,8 @@ export interface Props {
 }
 
 const { href } = Astro.props as Props
-const active = Astro.url.pathname === href
+const trimSlash = (str: string) => str.trim().replace(/^\/|\/$/g, '')
+const active = trimSlash(Astro.url.pathname) === trimSlash(href)
 ---
 
 <a class="nav-link" data-active={active ? '' : undefined} href={href}>
