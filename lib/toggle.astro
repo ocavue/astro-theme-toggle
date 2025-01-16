@@ -48,7 +48,7 @@ const props: Props = Astro.props
     width: 100%;
     height: 100%;
 
-    & :global(*) {
+    & * {
       display: block;
     }
   }
@@ -56,7 +56,7 @@ const props: Props = Astro.props
   .astro-theme-toggle-icon-light {
     display: block;
 
-    :global(.dark) & {
+    .dark & {
       display: none;
     }
   }
@@ -64,7 +64,7 @@ const props: Props = Astro.props
   .astro-theme-toggle-icon-dark {
     display: none;
 
-    :global(.dark) & {
+    .dark & {
       display: block;
     }
   }
