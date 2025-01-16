@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.4.0...v0.5.0) (2025-01-16)
+
+
+### Features
+
+* add `Toggle` component with default icons ([#17](https://github.com/ocavue/astro-theme-toggle/issues/17)) ([72dc1bf](https://github.com/ocavue/astro-theme-toggle/commit/72dc1bff567c315ae859c24cf429d468ff524e96))
+
 ## [0.4.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.5...v0.4.0) (2025-01-16)
 
 
