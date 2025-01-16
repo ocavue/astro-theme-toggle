@@ -1,21 +1,5 @@
 ---
-import './icon.css'
-import IconSunSvg from './icon-sun-svg.astro'
-import IconMoonSvg from './icon-moon-svg.astro'
+import { Toggle } from 'astro-theme-toggle'
 ---
 
-<button id="theme-toggle">
-  <IconSunSvg class="icon-sun" />
-  <IconMoonSvg class="icon-moon" />
-</button>
-
-<script>
-  import { handleToggleClick } from 'astro-theme-toggle'
-  const addListener = () => {
-    document
-      .getElementById('theme-toggle')
-      ?.addEventListener('click', handleToggleClick)
-  }
-  addListener()
-  document.addEventListener('astro:after-swap', addListener)
-</script>
+<Toggle />
