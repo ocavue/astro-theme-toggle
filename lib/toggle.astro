@@ -8,7 +8,7 @@ type Props = HTMLAttributes<'button'>
 const props: Props = Astro.props
 ---
 
-<button id="astro-theme-toggle" class="astro-theme-toggle" {...props}>
+<button id="astro-theme-toggle" {...props}>
   <div class="astro-theme-toggle-icon-light">
     <slot name="icon-light">
       <IconSunSvg />
@@ -33,7 +33,7 @@ const props: Props = Astro.props
 </script>
 
 <style is:global>
-  .astro-theme-toggle {
+  :where(#astro-theme-toggle) {
     padding: 0;
     margin: 0;
     border: none;

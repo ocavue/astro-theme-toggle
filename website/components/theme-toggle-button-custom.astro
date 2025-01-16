@@ -2,13 +2,11 @@
 import { Toggle } from 'astro-theme-toggle'
 ---
 
-<div style="width: 64px; height: 64px;">
-  <Toggle>
-    <Fragment slot="icon-light">
-      <span style="font-size: 64px;">🌞</span>
-    </Fragment>
-    <Fragment slot="icon-dark">
-      <span style="font-size: 64px;">🌚</span>
-    </Fragment>
-  </Toggle>
-</div>
+<Toggle style="width: 64px; height: 64px;">
+  <Fragment slot="icon-light">
+    <span style="font-size: 64px;">🌞</span>
+  </Fragment>
+  <Fragment slot="icon-dark">
+    <span style="font-size: 64px;">🌚</span>
+  </Fragment>
+</Toggle>
