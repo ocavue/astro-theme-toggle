@@ -31,41 +31,33 @@ npm install astro-theme-toggle
    </head>
    ```
 
-2. Add a button to your `<body>` to toggle the theme:
+2. Add the `Toggle` component to your `<body>` to toggle the theme:
 
    ```astro
-   <button id="theme-toggle">
-     <!-- https://lucide.dev/icons/moon -->
-     <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-moon"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-     <!-- https://lucide.dev/icons/sun -->
-     <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-   </button>
+   ---
+   import { Toggle } from 'astro-theme-toggle'
+   ---
 
-   <script>
-    import { handleToggleClick } from 'astro-theme-toggle'
-    const addListener = () => {
-      document
-        .getElementById('theme-toggle')
-        ?.addEventListener('click', handleToggleClick)
-    }
-    addListener()
-    document.addEventListener('astro:after-swap', addListener)
-   </script>
+   <Toggle style="width: 32px; height: 32px;" />
+   ```
 
-   <style is:global>
-     .icon-sun {
-       display: block;
-     }
-     .icon-moon {
-       display: none;
-     }
-     .dark .icon-sun {
-       display: none;
-     }
-     .dark .icon-moon {
-       display: block;
-     }
-   </style>
+3. You can customize the icon by passing a `Fragment` with the `icon-light` and `icon-dark` slots.
+
+   ```astro
+   ---
+   import { Toggle } from 'astro-theme-toggle'
+   import MyLightIcon from './my-light-icon.astro'
+   import MyDarkIcon from './my-dark-icon.astro'
+   ---
+
+   <Toggle style="width: 32px; height: 32px;">
+     <Fragment slot="icon-light">
+       <MyLightIcon />
+     </Fragment>
+     <Fragment slot="icon-dark">
+       <MyDarkIcon />
+     </Fragment>
+   </Toggle>
    ```
 
 ## Live Examples
