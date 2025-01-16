@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.5...v0.4.0) (2025-01-16)
+
+
+### Features
+
+* set data-theme attribute ([#15](https://github.com/ocavue/astro-theme-toggle/issues/15)) ([c5e69b8](https://github.com/ocavue/astro-theme-toggle/commit/c5e69b8ad5bb2c5cbb8629ed5e00d96f0e5b91d2))
+
 ## [0.3.5](https://github.com/ocavue/astro-theme-toggle/compare/v0.3.4...v0.3.5) (2024-10-08)
 
 
