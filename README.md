@@ -14,8 +14,9 @@ npm install astro-theme-toggle
 
 ## Usage
 
-1. Add the `ThemeScript` component to your `<head>`. This will toggle the `dark`
-   class on your `<html>` element based on the user's theme preference.
+1. Add the `ThemeScript` component to your `<head>`. This will set the
+   `data-theme` attribute and toggle the `dark` class on your `<html>` element
+   based on the user's theme preference.
 
    ```astro
    ---
