@@ -9,16 +9,14 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>
-  <main>
-    <div class="instructions">
-      <ThemeToggleButtonVue client:load />
-    </div>
-    <Nav />
+  <div class="instructions">
+    <ThemeToggleButtonVue client:load />
+  </div>
+  <Nav />
 
-    <div style="display: flex; flex-direction: column; gap: 20px;">
-      <Code code={buttonCode} lang="vue" title="theme-toggle-button-vue.vue" />
-      <Code code={headCode} lang="astro" title="head.astro" />
-      <Code code={iconCssCode} lang="css" title="icon.css" />
-    </div>
-  </main>
+  <div style="display: flex; flex-direction: column; gap: 20px;">
+    <Code code={buttonCode} lang="vue" title="theme-toggle-button-vue.vue" />
+    <Code code={headCode} lang="astro" title="head.astro" />
+    <Code code={iconCssCode} lang="css" title="icon.css" />
+  </div>
 </Layout>

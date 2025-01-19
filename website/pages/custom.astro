@@ -8,15 +8,13 @@ import Layout from '../layouts/Layout.astro'
 ---
 
 <Layout>
-  <main>
-    <div class="instructions">
-      <ThemeToggleButton  />
-    </div>
-    <Nav />
+  <div class="instructions">
+    <ThemeToggleButton />
+  </div>
+  <Nav />
 
-    <div style="display: flex; flex-direction: column; gap: 20px;">
-      <Code code={buttonCode} lang="astro" title="theme-toggle-button.astro" />
-      <Code code={headCode} lang="astro" title="head.astro" />
-    </div>
-  </main>
+  <div style="display: flex; flex-direction: column; gap: 20px;">
+    <Code code={buttonCode} lang="astro" title="theme-toggle-button.astro" />
+    <Code code={headCode} lang="astro" title="head.astro" />
+  </div>
 </Layout>

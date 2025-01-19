@@ -16,5 +16,13 @@ import NavLink from './nav-link.astro'
     align-items: center;
     gap: 10px;
     margin-bottom: 80px;
+    overflow-x: hidden;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 50rem) {
+    .nav {
+      flex-direction: column;
+    }
   }
 </style>
