@@ -3,22 +3,24 @@
 
   const storageKey = 'theme-toggle'
 
+  let currentTheme: Theme | undefined
+
   function getSystemTheme(): Theme {
     return window.matchMedia('(prefers-color-scheme: dark)').matches
       ? 'dark'
       : 'light'
   }
 
-  function getUserTheme(): Theme | null {
+  function getStoredTheme(): Theme | null {
     const theme = localStorage.getItem(storageKey)
     return theme === 'dark' || theme === 'light' ? theme : null
   }
 
   function getTheme(): Theme {
-    return getUserTheme() || getSystemTheme()
+    return currentTheme || getStoredTheme() || getSystemTheme()
   }
 
-  function setUserTheme(theme: Theme) {
+  function setStoredTheme(theme: Theme) {
     if (theme === getSystemTheme()) {
       localStorage.removeItem(storageKey)
     } else {
@@ -34,7 +36,8 @@
   }
 
   function setTheme(theme: Theme) {
-    setUserTheme(theme)
+    currentTheme = theme
+    setStoredTheme(theme)
     setStyle(theme)
   }
 
