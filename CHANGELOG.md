@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.5.0...v0.5.1) (2025-01-25)
+
+
+### Bug Fixes
+
+* save current theme to handle system theme change ([#20](https://github.com/ocavue/astro-theme-toggle/issues/20)) ([a9a90d4](https://github.com/ocavue/astro-theme-toggle/commit/a9a90d49e9a3c9483ef20a9196079c25b4c47852))
+
 ## [0.5.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.4.0...v0.5.0) (2025-01-16)
 
 
