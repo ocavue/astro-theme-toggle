@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.5.1...v0.6.0) (2025-03-19)
+
+
+### Features
+
+* add custom element &lt;astro-theme-toggle&gt; ([#22](https://github.com/ocavue/astro-theme-toggle/issues/22)) ([bd9cab1](https://github.com/ocavue/astro-theme-toggle/commit/bd9cab1d4fa4a2ea7f8aa144d84035831c0a4f28))
+
 ## [0.5.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.5.0...v0.5.1) (2025-01-25)
 
 
