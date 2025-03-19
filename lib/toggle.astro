@@ -4,11 +4,11 @@ import type { HTMLAttributes } from 'astro/types'
 import IconSunSvg from './icons/lucide-sun.astro'
 import IconMoonSvg from './icons/lucide-moon.astro'
 
-type Props = HTMLAttributes<'button'>
+type Props = HTMLAttributes<'div'>
 const props: Props = Astro.props
 ---
 
-<button id="astro-theme-toggle" {...props}>
+<astro-theme-toggle {...props}>
   <div class="astro-theme-toggle-icon-light">
     <slot name="icon-light">
       <IconSunSvg />
@@ -19,25 +19,23 @@ const props: Props = Astro.props
       <IconMoonSvg />
     </slot>
   </div>
-</button>
+</astro-theme-toggle>
 
 <script>
   import { handleToggleClick } from './handle-toggle-click'
-  const addListener = () => {
-    document
-      .getElementById('astro-theme-toggle')
-      ?.addEventListener('click', handleToggleClick)
+
+  class AstroThemeToggle extends HTMLElement {
+    connectedCallback() {
+      this.addEventListener('click', handleToggleClick)
+    }
   }
-  addListener()
-  document.addEventListener('astro:after-swap', addListener)
+
+  customElements.define('astro-theme-toggle', AstroThemeToggle)
 </script>
 
 <style is:global>
-  :where(#astro-theme-toggle) {
-    padding: 0;
-    margin: 0;
-    border: none;
-    background: none;
+  astro-theme-toggle {
+    display: block;
     cursor: pointer;
     width: 100%;
     height: 100%;
