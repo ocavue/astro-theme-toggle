@@ -25,6 +25,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "bash build.sh",
+    "preview": "astro preview",
     "lint": "eslint .",
     "fix": "eslint --fix . && prettier --write .",
     "typecheck": "tsc --noEmit"
