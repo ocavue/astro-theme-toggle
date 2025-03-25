@@ -17,7 +17,13 @@
   }
 
   function getTheme(): Theme {
-    return currentTheme || getStoredTheme() || getSystemTheme()
+    const a = currentTheme
+    const b = getStoredTheme()
+    const c = getSystemTheme()
+
+    console.log({ a, b, c })
+
+    return a || b || c
   }
 
   function setStoredTheme(theme: Theme) {
