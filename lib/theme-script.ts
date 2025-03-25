@@ -9,7 +9,7 @@
     const isLight = window.matchMedia('(prefers-color-scheme: light)')
     const isDark = window.matchMedia('(prefers-color-scheme: dark)')
 
-    console.log(JSON.stringify({ isLight, isDark }))
+    console.log(JSON.stringify({ isLight, isDark }), { isLight, isDark })
 
     const isDarkMatches = window.matchMedia(
       '(prefers-color-scheme: dark)',
@@ -19,7 +19,10 @@
       '(prefers-color-scheme: light)',
     ).matches
 
-    console.log(JSON.stringify({ isDarkMatches, isLightMatches }))
+    console.log(JSON.stringify({ isDarkMatches, isLightMatches }), {
+      isDarkMatches,
+      isLightMatches,
+    })
 
     const result: Theme = window.matchMedia('(prefers-color-scheme: dark)')
       .matches
