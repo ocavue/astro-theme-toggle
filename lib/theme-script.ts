@@ -11,9 +11,19 @@
 
     console.log(JSON.stringify({ isLight, isDark }))
 
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isDarkMatches = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    ).matches
+    console.log(JSON.stringify({ isDarkMatches }))
+
+    const result: Theme = window.matchMedia('(prefers-color-scheme: dark)')
+      .matches
       ? 'dark'
       : 'light'
+
+    console.log('getSystemTheme', JSON.stringify({ result }))
+
+    return result
   }
 
   function getStoredTheme(): Theme | null {
