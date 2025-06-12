@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.6.0...v0.6.1) (2025-06-12)
+
+
+### Bug Fixes
+
+* enhance keyboard accessibility ([#25](https://github.com/ocavue/astro-theme-toggle/issues/25)) ([59df2e6](https://github.com/ocavue/astro-theme-toggle/commit/59df2e61ff42fa5c13e5317d7c39a41d9ea3ea4b))
+
 ## [0.6.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.5.1...v0.6.0) (2025-03-19)
 
 
