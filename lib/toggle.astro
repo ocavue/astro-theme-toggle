@@ -26,7 +26,22 @@ const props: Props = Astro.props
 
   class AstroThemeToggle extends HTMLElement {
     connectedCallback() {
+      if (!this.hasAttribute('tabindex')) {
+        this.setAttribute('tabindex', '0')
+      }
+      if (!this.hasAttribute('role')) {
+        this.setAttribute('role', 'button')
+      }
       this.addEventListener('click', handleToggleClick)
+      this.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault()
+          const rect = this.getBoundingClientRect()
+          const clientX = rect.left + rect.width / 2
+          const clientY = rect.top + rect.height / 2
+          handleToggleClick({ clientX, clientY })
+        }
+      })
     }
   }
 
