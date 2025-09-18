@@ -34,18 +34,18 @@
     "@astrojs/vue": "^5.1.1",
     "@ocavue/eslint-config": "^3.4.0",
     "@types/node": "^20.16.3",
-    "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
     "astro": "^5.13.8",
     "astro-expressive-code": "^0.41.3",
-    "esbuild": "^0.23.1",
+    "esbuild": "^0.25.10",
     "eslint": "^9.35.0",
-    "lucide-react": "^0.447.0",
-    "lucide-vue-next": "^0.447.0",
+    "lucide-react": "^0.544.0",
+    "lucide-vue-next": "^0.544.0",
     "prettier": "^3.6.2",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "typescript": "^5.5.4",
-    "vue": "^3.5.11"
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "typescript": "^5.9.2",
+    "vue": "^3.5.21"
   }
 }
