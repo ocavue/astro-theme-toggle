@@ -1,7 +1,7 @@
 {
   "name": "astro-theme-toggle",
   "type": "module",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "packageManager": "pnpm@10.17.0",
   "description": "Add a ripple-style theme toggle animation to your Astro project with ease",
   "author": "ocavue <ocavue@gmail.com>",

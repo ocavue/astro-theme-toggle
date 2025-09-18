@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.6.1...v0.7.0) (2025-09-18)
+
+
+### Features
+
+* update minimal astro version to v5 ([#29](https://github.com/ocavue/astro-theme-toggle/issues/29)) ([b291931](https://github.com/ocavue/astro-theme-toggle/commit/b291931c7dbde6516d8a9bb6274dd81f94191f34))
+
 ## [0.6.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.6.0...v0.6.1) (2025-06-12)
 
 
