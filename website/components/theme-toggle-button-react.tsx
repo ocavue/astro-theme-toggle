@@ -1,5 +1,6 @@
-import { handleToggleClick } from 'astro-theme-toggle'
 import { Moon, Sun } from 'lucide-react'
+
+import { handleToggleClick } from 'astro-theme-toggle'
 import './icon.css'
 
 export default function ThemeToggleButtonReact() {

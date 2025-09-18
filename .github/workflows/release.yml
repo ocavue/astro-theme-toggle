@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      id-token: write    
+      id-token: write
     needs: [version]
     if: ${{ needs.version.outputs.release_created }}
     steps:
