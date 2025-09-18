@@ -47,10 +47,5 @@
     "react-dom": "^18.3.1",
     "typescript": "^5.5.4",
     "vue": "^3.5.11"
-  },
-  "renovate": {
-    "extends": [
-      "github>ocavue/config-renovate"
-    ]
   }
 }
