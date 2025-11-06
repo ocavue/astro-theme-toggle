@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.7.0...v0.8.0) (2025-11-06)
+
+
+### Features
+
+* add new exports /client and /components ([#32](https://github.com/ocavue/astro-theme-toggle/issues/32)) ([2853216](https://github.com/ocavue/astro-theme-toggle/commit/2853216c45a61b5319c425cecf2d8754b667ed2b))
+
 ## [0.7.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.6.1...v0.7.0) (2025-09-18)
 
 
