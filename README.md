@@ -20,7 +20,7 @@ npm install astro-theme-toggle
 
    ```astro
    ---
-   import { ThemeScript } from 'astro-theme-toggle';
+   import { ThemeScript } from 'astro-theme-toggle/components';
    ---
    <head>
      <meta charset="utf-8" />
@@ -35,7 +35,7 @@ npm install astro-theme-toggle
 
    ```astro
    ---
-   import { Toggle } from 'astro-theme-toggle'
+   import { Toggle } from 'astro-theme-toggle/components'
    ---
 
    <Toggle style="width: 32px; height: 32px;" />
@@ -45,7 +45,7 @@ npm install astro-theme-toggle
 
    ```astro
    ---
-   import { Toggle } from 'astro-theme-toggle'
+   import { Toggle } from 'astro-theme-toggle/components'
    import MyLightIcon from './my-light-icon.astro'
    import MyDarkIcon from './my-dark-icon.astro'
    ---

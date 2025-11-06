@@ -20,7 +20,9 @@
   ],
   "sideEffects": false,
   "exports": {
-    ".": "./lib/index.ts"
+    ".": "./lib/index.ts",
+    "./client": "./lib/client.ts",
+    "./components": "./lib/components.ts"
   },
   "scripts": {
     "dev": "astro dev",
