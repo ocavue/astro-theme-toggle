@@ -1,32 +1,6 @@
 {
+  "extends": "@ocavue/tsconfig/dom/app.json",
   "compilerOptions": {
-    "target": "es2018",
-    "module": "esnext",
-    "lib": ["esnext", "dom"],
     "jsx": "preserve",
-    "allowJs": true,
-    "moduleResolution": "Bundler",
-    "esModuleInterop": true,
-    "strict": true,
-    "strictNullChecks": true,
-    "verbatimModuleSyntax": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "paths": {
-      "astro-theme-toggle": ["./lib"]
-    },
-    "outDir": "temp/ts",
-    "jsxImportSource": "react"
-  },
-  "include": [
-    "lib",
-    "./*.ts",
-    "./*.js",
-    "./*.ts",
-    "./*.mjs",
-    "website",
-    ".astro"
-  ]
+  }
 }
