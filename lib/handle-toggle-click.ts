@@ -21,6 +21,7 @@ async function startCircleAnimation(
   callback: () => void,
   x: number,
   y: number,
+  speed = 500,
 ) {
   const doc = document as unknown as {
     startViewTransition?: (updateCallback?: () => unknown) => {
@@ -62,13 +63,13 @@ async function startCircleAnimation(
       maskSize: ['0', `${2 * maxRadius}px`],
     },
     {
-      duration: 500,
+      duration: speed,
       easing: 'ease-in',
       pseudoElement: '::view-transition-new(root)',
     },
   )
 }
 
-export function handleToggleClick(event: { clientX: number; clientY: number }) {
-  void startCircleAnimation(toggleTheme, event.clientX, event.clientY)
+export function handleToggleClick(event: { clientX: number; clientY: number, speed?: number }) {
+  void startCircleAnimation(toggleTheme, event.clientX, event.clientY, event.speed)
 }
