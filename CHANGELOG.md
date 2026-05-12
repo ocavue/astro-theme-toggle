@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.8.0...v0.8.1) (2026-05-12)
+
+
+### Bug Fixes
+
+* update dependencies ([#46](https://github.com/ocavue/astro-theme-toggle/issues/46)) ([519895f](https://github.com/ocavue/astro-theme-toggle/commit/519895f180703489aae7ced8316a80b28410c41d))
+
 ## [0.8.0](https://github.com/ocavue/astro-theme-toggle/compare/v0.7.0...v0.8.0) (2025-11-06)
 
 
