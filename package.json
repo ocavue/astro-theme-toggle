@@ -47,7 +47,7 @@
     "esbuild": "^0.27.1",
     "eslint": "^10.3.0",
     "lucide-react": "^1.14.0",
-    "lucide-vue-next": "^1.0.0",
+    "@lucide/vue": "^1.0.0",
     "prettier": "^3.7.4",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
