@@ -1,4 +1,4 @@
-;(() => {
+{
   type Theme = 'light' | 'dark'
 
   const storageKey = 'theme-toggle'
@@ -52,4 +52,4 @@
   document.addEventListener('astro:after-swap', setupTheme)
 
   window.astroThemeToggle = { setTheme, getTheme }
-})()
+}
