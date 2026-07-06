@@ -13,14 +13,16 @@ export function getTheme(): 'light' | 'dark' {
   if (typeof window === 'undefined') {
     return 'light'
   }
-  return window.astroThemeToggle?.getTheme?.() || 'light'
+  const api = window.astroThemeToggle
+  return api?.getTheme?.() || 'light'
 }
 
 export function setTheme(theme: 'light' | 'dark') {
   if (typeof window === 'undefined') {
     return
   }
-  window.astroThemeToggle?.setTheme?.(theme)
+  const api = window.astroThemeToggle
+  api?.setTheme?.(theme)
 }
 
 export function toggleTheme() {
