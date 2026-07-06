@@ -2,10 +2,12 @@ export type Theme = 'light' | 'dark'
 
 declare global {
   interface Window {
-    astroThemeToggle?: {
-      setTheme?: (theme: 'dark' | 'light') => void
-      getTheme?: () => 'dark' | 'light'
-    } | undefined
+    astroThemeToggle?:
+      | {
+          setTheme?: (theme: 'dark' | 'light') => void
+          getTheme?: () => 'dark' | 'light'
+        }
+
   }
 }
 
