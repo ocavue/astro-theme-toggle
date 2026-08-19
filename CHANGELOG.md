@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.2](https://github.com/ocavue/astro-theme-toggle/compare/v0.8.1...v0.8.2) (2026-08-19)
+
+
+### Bug Fixes
+
+* use explicit file extensions in import paths ([#57](https://github.com/ocavue/astro-theme-toggle/issues/57)) ([350604e](https://github.com/ocavue/astro-theme-toggle/commit/350604ef4f482797f63047aaa5701b00f55ce81d))
+
 ## [0.8.1](https://github.com/ocavue/astro-theme-toggle/compare/v0.8.0...v0.8.1) (2026-05-12)
 
 
