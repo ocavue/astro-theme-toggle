@@ -1,4 +1,4 @@
-import { toggleTheme } from './theme'
+import { toggleTheme } from './theme.ts'
 
 const STYLE_ID = 'astro-theme-toggle-temporary-styles'
 const STYLE_CONTENT =
