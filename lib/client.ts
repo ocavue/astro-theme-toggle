@@ -1,2 +1,2 @@
-export { handleToggleClick } from './handle-toggle-click'
-export { getTheme, setTheme } from './theme'
+export { handleToggleClick } from './handle-toggle-click.ts'
+export { getTheme, setTheme } from './theme.ts'
