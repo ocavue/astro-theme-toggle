@@ -20,5 +20,4 @@ export function getAnimation(animation: AnimationName | TransitionAnimation): Tr
       const fn = await loadBuildinAnimation(animation)
       return await fn?.(options)
     }
-  }
-Ï
+}

@@ -4,9 +4,6 @@ import { startCircleAnimation } from './animations/circle.ts'
 import { loadBuildinAnimation } from './animations/index.ts'
 import { subscribeThemeChange, toggleTheme } from './theme.ts'
 
-function handleClick(x: number, y: number) {
-  void startCircleAnimation(toggleTheme, x, y)
-}
 
 class ThemeToggleElement extends HTMLElement {
   private unsubscribe: VoidFunction | undefined
@@ -19,7 +16,7 @@ class ThemeToggleElement extends HTMLElement {
       this.setAttribute('role', 'button')
     }
     this.addEventListener('click', (event) => {
-      handleClick(event.clientX, event.clientY)
+      handleClick()
     })
     this.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
@@ -55,6 +52,10 @@ class ThemeToggleElement extends HTMLElement {
 
   private getAnimationName(): string | undefined {
     return this.dataset.animationName
+  }
+
+  private handleClick(event: {}) {
+    onCustomClick
   }
 }
 
