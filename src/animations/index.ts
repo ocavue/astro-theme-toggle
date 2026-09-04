@@ -26,9 +26,9 @@ export async function loadBuildinAnimation(name: AnimationName): Promise<Transit
 /**
  * @internal
  */
- export async function tryLoadAnimation(name: string): Promise<TransitionAnimation | undefined> {
+ export   function tryLoadAnimation(name: string): undefined| Promise<TransitionAnimation> {
   if (isValidAnimationName(name)) {
-    return await loadBuildinAnimation(name)
+    return   loadBuildinAnimation(name)
   }
 }
 
