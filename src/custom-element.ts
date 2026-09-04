@@ -1,7 +1,7 @@
 import { getTheme } from '../lib/theme.ts'
 
 import { startCircleAnimation } from './animations/circle.ts'
-import { loadBuildinAnimation } from './animations/index.ts'
+import { getAnimation, loadBuildinAnimation, tryLoadAnimation } from './animations/index.ts'
 import { subscribeThemeChange, toggleTheme } from './theme.ts'
 
 
@@ -16,7 +16,7 @@ class ThemeToggleElement extends HTMLElement {
       this.setAttribute('role', 'button')
     }
     this.addEventListener('click', (event) => {
-      handleClick()
+      const animation = getAnimation(this.getAnimationName())
     })
     this.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
@@ -37,7 +37,7 @@ class ThemeToggleElement extends HTMLElement {
     const animationName = this.getAnimationName()
     if (animationName) {
       // Preload the built-in animation to avoid delay on first click
-      void loadBuildinAnimation(animationName)
+      void tryLoadAnimation(animationName)
     }
   }
 
@@ -54,8 +54,8 @@ class ThemeToggleElement extends HTMLElement {
     return this.dataset.animationName
   }
 
-  private handleClick(event: {}) {
-    onCustomClick
+  play() {
+
   }
 }
 
