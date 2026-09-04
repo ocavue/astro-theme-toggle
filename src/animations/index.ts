@@ -1,12 +1,12 @@
 import type { TransitionAnimation } from './types.ts';
 
-export type AnimationName = 'circle'
+export type AnimationName = 'circle' | "none"
 
 /**
  * @internal
  */
 export function isValidAnimationName(name: string): name is AnimationName {
-  return ['circle'].includes(name)
+  return ['circle', 'none'].includes(name)
 }
 
 /**
@@ -16,6 +16,10 @@ export async function loadBuildinAnimation(name: AnimationName): Promise<Transit
   switch (name) {
     case 'circle':
       return await import('./circle.ts').then((module) => module.default)
+    case 'none':
+      return   () => {
+        // No animation
+      }
   }
 }
 
