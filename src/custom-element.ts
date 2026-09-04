@@ -55,7 +55,7 @@ class ThemeToggleElement extends HTMLElement {
     return this.dataset.animationName
   }
 
-  play(options: TransitionAnimationOptions): void {
+  private run(options: TransitionAnimationOptions): void {
     const maybeAnimationName = this.getAnimationName()
     const animationName = maybeAnimationName && isValidAnimationName(maybeAnimationName)  ? maybeAnimationName : undefined
     if (animationName) {
