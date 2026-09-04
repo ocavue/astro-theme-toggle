@@ -22,4 +22,4 @@ async function loadAnimation(name: AnimationName): Promise<TransitionAnimation> 
   }
 
 
-  export {loadAnimation, getAnimation}Ï
+  export {loadAnimation, getAnimation}
