@@ -1,6 +1,7 @@
 import { getTheme } from '../lib/theme.ts'
 
 import { startCircleAnimation } from './animations/circle.ts'
+import { loadBuildinAnimation } from './animations/index.ts'
 import { subscribeThemeChange, toggleTheme } from './theme.ts'
 
 function handleClick(x: number, y: number) {
@@ -35,6 +36,12 @@ class ThemeToggleElement extends HTMLElement {
     this.unsubscribe = subscribeThemeChange(() => {
       this.render()
     })
+
+    const animationName = this.getAnimationName()
+    if (animationName) {
+      // Preload the built-in animation to avoid delay on first click
+      void loadBuildinAnimation(animationName)
+    }
   }
 
   disconnectedCallback() {
@@ -44,6 +51,10 @@ class ThemeToggleElement extends HTMLElement {
 
   private render() {
     this.dataset.theme = getTheme()
+  }
+
+  private getAnimationName(): string | undefined {
+    return this.dataset.animationName
   }
 }
 
