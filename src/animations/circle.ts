@@ -17,7 +17,7 @@ function injectTemporaryStyles() {
   document.head.appendChild(style)
 }
 
-export async function startCircleAnimation(
+ async  function startCircleAnimation(
   { update, clientX, clientY }: TransitionAnimationOptions
 ) {
   const doc = document
@@ -64,3 +64,5 @@ export async function startCircleAnimation(
     },
   )
 }
+
+export default startCircleAnimation
