@@ -64,7 +64,16 @@ class ThemeToggleElement extends HTMLElement {
   }
 
   private run(options: TransitionAnimationOptions): void {
+    const customAnimation = this.customAnimation
+    if (customAnimation) {
+      void customAnimation(options)
+      return
+    }
 
+    const animationName = this.getAnimationName()
+    if (animationName && isValidAnimationName(animationName)) {
+      void getAnimation(animationName)(options)
+    }
   }
 }
 

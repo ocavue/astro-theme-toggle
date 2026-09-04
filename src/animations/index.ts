@@ -9,26 +9,19 @@ export function isValidAnimationName(name: string): name is AnimationName {
   return ['circle', 'none'].includes(name)
 }
 
-/**
- * @internal
- */
-export async function loadBuildinAnimation(name: AnimationName): Promise<TransitionAnimation> {
-  switch (name) {
-    case 'circle':
-      return await import('./circle.ts').then((module) => module.default)
-    case 'none':
-      return   () => {
-        // No animation
-      }
-  }
+const noneAnimation: TransitionAnimation = () => {
+  // No animation
 }
 
 /**
  * @internal
  */
- export   function tryLoadAnimation(name: string): undefined| Promise<TransitionAnimation> {
-  if (isValidAnimationName(name)) {
-    return   loadBuildinAnimation(name)
+export async function loadBuildinAnimation(name: AnimationName): Promise<{default?: TransitionAnimation}> {
+  switch (name) {
+    case 'circle':
+      return await import('./circle.ts')
+    case 'none':
+      return  {default: noneAnimation}
   }
 }
 
@@ -39,7 +32,7 @@ export function getAnimation(animation: AnimationName | TransitionAnimation): Tr
   }
 
   return async (options) => {
-      const fn = await loadBuildinAnimation(animation)
-      return await fn?.(options)
+      const module = await loadBuildinAnimation(animation)
+      return await module.default?.(options)
     }
 }
