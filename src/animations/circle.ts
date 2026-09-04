@@ -18,7 +18,7 @@ function injectTemporaryStyles() {
 }
 
 export async function startCircleAnimation(
-  { update, clientX: x, clientY: y }: TransitionAnimationOptions
+  { update, clientX, clientY }: TransitionAnimationOptions
 ) {
   const doc = document
 
@@ -26,6 +26,9 @@ export async function startCircleAnimation(
     update()
     return
   }
+
+  const x = clientX ?? (window.innerWidth / 2)
+  const y = clientY ?? (window.innerHeight / 2)
 
   injectTemporaryStyles()
 
