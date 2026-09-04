@@ -29,10 +29,20 @@
   ],
   "scripts": {
     "dev": "astro dev",
-    "build": "bash build.sh",
+    "build": "tsdown",
     "lint": "eslint .",
-    "fix": "eslint --fix . && prettier --write .",
+    "fix": "pnpm fix:eslint . && pnpm fix:prettier",
+    "fix:prettier": "prettier --write .",
+    "fix:eslint": "eslint --fix .",
     "typecheck": "tsc -b ."
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@astrojs/react": "^6.0.2",
@@ -51,6 +61,7 @@
     "prettier": "^3.9.6",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "tsdown": "^0.23.0",
     "typescript": "^6.0.3",
     "vue": "^3.5.41"
   }
