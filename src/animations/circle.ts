@@ -1,3 +1,5 @@
+import type { TransitionAnimationOptions } from "./types.ts"
+
 const STYLE_ID = 'astro-theme-toggle-temporary-styles'
 const STYLE_CONTENT =
   '::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }'
@@ -16,21 +18,19 @@ function injectTemporaryStyles() {
 }
 
 export async function startCircleAnimation(
-  callback: () => void,
-  x: number,
-  y: number,
+  { update, clientX: x, clientY: y }: TransitionAnimationOptions
 ) {
   const doc = document
 
   if (typeof doc.startViewTransition !== 'function') {
-    callback()
+    update()
     return
   }
 
   injectTemporaryStyles()
 
   const transition = doc.startViewTransition(() => {
-    callback()
+    update()
   })
 
   await transition?.ready
