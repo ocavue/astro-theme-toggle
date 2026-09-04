@@ -1,8 +1,8 @@
 import { getTheme } from '../lib/theme.ts'
 
-import { getAnimation, isValidAnimationName, tryLoadAnimation } from './animations/index.ts'
+import { getAnimation, isValidAnimationName, loadBuildinAnimation } from './animations/index.ts'
 import type { TransitionAnimation, TransitionAnimationOptions } from './animations/types.ts'
-import { subscribeThemeChange } from './theme.ts'
+import { subscribeThemeChange, toggleTheme } from './theme.ts'
 
 
 class ThemeToggleElement extends HTMLElement {
@@ -25,7 +25,7 @@ class ThemeToggleElement extends HTMLElement {
       this.setAttribute('role', 'button')
     }
     this.addEventListener('click', (event) => {
-      const animation = getAnimation(this.getAnimationName())
+        this.run(event.clientX, event.clientY)
     })
     this.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
@@ -33,7 +33,7 @@ class ThemeToggleElement extends HTMLElement {
         const rect = this.getBoundingClientRect()
         const clientX = rect.left + rect.width / 2
         const clientY = rect.top + rect.height / 2
-        handleClick(clientX, clientY)
+        this.run(clientX, clientY)
       }
     })
     this.render()
@@ -44,9 +44,9 @@ class ThemeToggleElement extends HTMLElement {
     })
 
     const animationName = this.getAnimationName()
-    if (animationName) {
+    if (animationName && isValidAnimationName(animationName)) {
       // Preload the built-in animation to avoid delay on first click
-      void tryLoadAnimation(animationName)
+      void loadBuildinAnimation(animationName)
     }
   }
 
@@ -63,7 +63,11 @@ class ThemeToggleElement extends HTMLElement {
     return this.dataset.animationName
   }
 
-  private run(options: TransitionAnimationOptions): void {
+  private run(clientX: number, clientY: number): void {
+    const options: TransitionAnimationOptions = {
+      clientX, clientY, update: toggleTheme
+    }
+
     const customAnimation = this.customAnimation
     if (customAnimation) {
       void customAnimation(options)
