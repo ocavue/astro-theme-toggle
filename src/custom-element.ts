@@ -1,13 +1,21 @@
 import { getTheme } from '../lib/theme.ts'
 
-import { startCircleAnimation } from './animations/circle.ts'
-import { getAnimation, isValidAnimationName, loadBuildinAnimation, tryLoadAnimation } from './animations/index.ts'
-import type { TransitionAnimationOptions } from './animations/types.ts'
-import { subscribeThemeChange, toggleTheme } from './theme.ts'
+import { getAnimation, isValidAnimationName, tryLoadAnimation } from './animations/index.ts'
+import type { TransitionAnimation, TransitionAnimationOptions } from './animations/types.ts'
+import { subscribeThemeChange } from './theme.ts'
 
 
 class ThemeToggleElement extends HTMLElement {
   private unsubscribe: VoidFunction | undefined
+  private _customAnimation: TransitionAnimation  | null | undefined
+
+  get customAnimation(): TransitionAnimation | null {
+    return this._customAnimation  || null
+  }
+
+  set customAnimation(value: TransitionAnimation | null)  {
+    this._customAnimation = (value || null)
+  }
 
   connectedCallback() {
     if (!this.hasAttribute('tabindex')) {
