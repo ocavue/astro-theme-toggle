@@ -2,6 +2,7 @@ import { getTheme } from '../lib/theme.ts'
 
 import { startCircleAnimation } from './animations/circle.ts'
 import { getAnimation, loadBuildinAnimation, tryLoadAnimation } from './animations/index.ts'
+import type { TransitionAnimationOptions } from './animations/types.ts'
 import { subscribeThemeChange, toggleTheme } from './theme.ts'
 
 
@@ -54,8 +55,9 @@ class ThemeToggleElement extends HTMLElement {
     return this.dataset.animationName
   }
 
-  play() {
-
+  play(options: TransitionAnimationOptions) {
+    const animation = getAnimation(this.getAnimationName())
+    return animation(options)
   }
 }
 

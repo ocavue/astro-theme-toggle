@@ -7,7 +7,7 @@ export interface TransitionAnimationOptions {
    *
    * See https://developer.mozilla.org/en-US/docs/Web/API/Document/startViewTransition#updatecallback
    */
-  update: VoidFunction,
+  update: () => void | Promise<void>,
 
   /**
    * The x-coordinate of the point where the user clicked to trigger the theme toggle.

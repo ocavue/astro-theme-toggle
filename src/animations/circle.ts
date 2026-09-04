@@ -1,6 +1,6 @@
 import type { TransitionAnimationOptions } from "./types.ts"
 
-const STYLE_ID = 'astro-theme-toggle-temporary-styles'
+const STYLE_ID = 'theme-toggle-temporary-styles'
 const STYLE_CONTENT =
   '::view-transition-old(root), ::view-transition-new(root) { animation: none; mix-blend-mode: normal; }'
 
@@ -23,7 +23,7 @@ function injectTemporaryStyles() {
   const doc = document
 
   if (typeof doc.startViewTransition !== 'function') {
-    update()
+    await update()
     return
   }
 
@@ -32,8 +32,8 @@ function injectTemporaryStyles() {
 
   injectTemporaryStyles()
 
-  const transition = doc.startViewTransition(() => {
-    update()
+  const transition = doc.startViewTransition(async () => {
+    return await update()
   })
 
   await transition?.ready
