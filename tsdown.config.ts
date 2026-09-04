@@ -14,8 +14,7 @@ export default defineConfig([
       './src/index.ts',
       './src/custom-element.ts',
       './src/theme.ts',
-
-      './src/frameworks/react.ts',
+      './src/react/index.ts',
     ],
     outDir: './dist',
     minify: false,

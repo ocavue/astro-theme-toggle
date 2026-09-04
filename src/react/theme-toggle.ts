@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { type AnimationName } from '../animations/index.ts'
+import type { AnimationName } from '../animations/index.ts'
 import type { TransitionAnimation } from '../animations/types.ts'
 import { registerCustomElement } from '../custom-element.ts'
 
