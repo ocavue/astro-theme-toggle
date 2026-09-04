@@ -1,2 +1,2 @@
-export { ThemeToggle, type ThemeToggleProps } from './component.ts'
+export { ThemeToggle, type ThemeToggleProps } from './theme-toggle.ts'
 export { useTheme } from './use-theme.ts'
