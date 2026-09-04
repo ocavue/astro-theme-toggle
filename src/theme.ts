@@ -1,11 +1,20 @@
 const key = '_ocavue_css_theme'
 
+/** @internal */
 export const LIGHT = 'light'
+/** @internal */
 export const DARK = 'dark'
+/** @internal */
 export const SYSTEM = 'system'
 
-export type Theme = typeof LIGHT | typeof DARK | typeof SYSTEM
-export type DisplayTheme = typeof LIGHT | typeof DARK
+/**
+ * Represents the user theme preference, which can be "light", "dark", or "system".
+ */
+export type Theme = 'light' | 'dark' | 'system'
+/**
+ * Represents the theme used for display, which can be "light" or "dark".
+ */
+export type DisplayTheme = 'light' | 'dark'
 
 let currentTheme: Theme | undefined
 
@@ -60,6 +69,7 @@ export function applyTheme(theme: Theme): void {
  */
 export function updateTheme(newTheme: Theme): void {
   const changed = currentTheme !== newTheme
+  currentTheme = newTheme
   applyTheme(newTheme)
   if (changed) {
     handlers.forEach((handler) => handler())
