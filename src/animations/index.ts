@@ -9,10 +9,6 @@ export function isValidAnimationName(name: string): name is AnimationName {
   return ['circle', 'none'].includes(name)
 }
 
-const noneAnimation: TransitionAnimation = () => {
-  // No animation
-}
-
 /**
  * @internal
  */
@@ -21,7 +17,7 @@ export async function loadBuildinAnimation(name: AnimationName): Promise<{defaul
     case 'circle':
       return await import('./circle.ts')
     case 'none':
-      return  {default: noneAnimation}
+      return  {default: () => void 0}
   }
 }
 
