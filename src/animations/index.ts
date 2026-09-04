@@ -1,9 +1,9 @@
 import type { TransitionAnimation } from './types.ts';
 
-export type BuiltinAnimation = 'circle'
+export type AnimationName = 'circle'
 
 
-export async function loadBuildinAnimation(name: BuiltinAnimation): Promise<TransitionAnimation> {
+export async function loadBuildinAnimation(name: AnimationName): Promise<TransitionAnimation> {
   switch (name) {
     case 'circle':
       return await import('./circle.ts').then((module) => module.default)
@@ -14,7 +14,7 @@ export async function loadBuildinAnimation(name: BuiltinAnimation): Promise<Tran
 }
 
 
-export function getAnimation(animation: BuiltinAnimation | TransitionAnimation): TransitionAnimation {
+export function getAnimation(animation: AnimationName | TransitionAnimation): TransitionAnimation {
   if (typeof animation === 'function') {
     return animation
   }
