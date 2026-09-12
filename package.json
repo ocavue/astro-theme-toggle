@@ -2,7 +2,7 @@
   "name": "astro-theme-toggle",
   "type": "module",
   "version": "0.8.2",
-  "packageManager": "pnpm@11.21.0",
+  "packageManager": "pnpm@11.26.0",
   "description": "Add a ripple-style theme toggle animation to your Astro project with ease",
   "author": "ocavue <ocavue@gmail.com>",
   "license": "MIT",
@@ -35,23 +35,23 @@
     "typecheck": "tsc -b ."
   },
   "devDependencies": {
-    "@astrojs/react": "^6.0.2",
+    "@astrojs/react": "^6.0.5",
     "@astrojs/vue": "^7.0.2",
-    "@lucide/vue": "^1.31.0",
-    "@ocavue/eslint-config": "^4.13.5",
+    "@lucide/vue": "^1.45.0",
+    "@ocavue/eslint-config": "^4.16.1",
     "@ocavue/tsconfig": "^0.7.1",
     "@types/node": "^22.19.0",
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
     "astro": "^7.2.2",
-    "astro-expressive-code": "^0.44.1",
+    "astro-expressive-code": "^0.44.2",
     "esbuild": "^0.28.2",
-    "eslint": "^10.8.1",
-    "lucide-react": "^1.31.0",
+    "eslint": "^10.10.0",
+    "lucide-react": "^1.45.0",
     "prettier": "^3.9.6",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
     "typescript": "^6.0.3",
-    "vue": "^3.5.41"
+    "vue": "^3.5.42"
   }
 }
